@@ -4,6 +4,11 @@
 
     <p>Date  Us:</p> {{dateUs}}<br><br>
 
+    <div v-bind:id="id">
+      <p v-text="textBrut"></p>
+      <p v-html="textHtml"></p>
+    </div>
+
   </div>
 </template>
 
@@ -14,6 +19,10 @@ export default {
       data() {
         return {
           d: new Date(),
+          url : "../assets/logo.svg",
+          id : "vue",
+          textBrut : "simple text",
+          textHtml : "<font color ='red'><u>Un texte rouge souligné</u></font>"
         }
       },
   computed: {
