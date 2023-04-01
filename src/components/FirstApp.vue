@@ -11,6 +11,7 @@
       <p v-html="personne.prenom"></p>
       <p v-text="personne.age"></p>
     </div>
+    <br><br>
     <input type="text" v-model="personne.prenom"> Bonjour {{personne.prenom}}
     <select v-model="ville">
       <option>Madrid</option>
@@ -33,6 +34,10 @@
   <input type="radio" v-model="favorite" value="js"><label>js</label>
   <br><br>
   {{favorite}}
+  <br><br>
+  <h1 v-if="count > 1">Nombre de clics sur le bouton {{count}}</h1>
+  <h1 v-else>Nombre de clic sur le bouton {{count}}</h1>
+  <button v-on:click="count++">Incrémenter le compteur </button>
 </template>
 
 <script>
@@ -55,7 +60,8 @@
           texte1 : '',
           texte2 : '',
           caseCocher : [],
-          favorite : ''
+          favorite : '',
+          count : 0
         }
       },
       computed: {
