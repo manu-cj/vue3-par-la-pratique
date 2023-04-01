@@ -38,6 +38,13 @@
   <h1 v-if="count > 1">Nombre de clics sur le bouton {{count}}</h1>
   <h1 v-else>Nombre de clic sur le bouton {{count}}</h1>
   <button v-on:click="count++">Incrémenter le compteur </button>
+  <br><br>
+  <img src="../assets/logo.svg" alt="logo"
+       @click.left="largeur(200)"
+       @click.right="largeur(100)"
+       @click.middle="largeur(400)"
+       @dblclick="largeur(300)"
+       v-bind:width="valeur">
 </template>
 
 <script>
@@ -61,7 +68,9 @@
           texte2 : '',
           caseCocher : [],
           favorite : '',
-          count : 0
+          count : 0,
+          valeur : 300,
+
         }
       },
       computed: {
@@ -77,6 +86,10 @@
     methods: {
       recopie() {
         this.texte2 = this.texte1.toUpperCase()
+      },
+
+      largeur(val) {
+        this.valeur = val;
       }
     },
 
