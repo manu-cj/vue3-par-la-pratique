@@ -1,29 +1,48 @@
-<script setup>
+<script>
 // import FirstApp from "./components/FirstApp.vue";
 // import PartTwo from "./components/PartTwo.vue";
-import SayHello from "./components/SayHello.vue";
-import BonjourLoc from "./components/BonjourLoc.vue";
+// import SayHello from "./components/SayHello.vue";
 
+import CompteurClic from "./components/CompteurClic.vue";
+// import BonjourLoc from "./components/BonjourLoc.vue";
 
+export default {
+  name: 'App',
+  data(){
+    return {
+      total : 0,
+    }
+  },
 
+  methods: {
+    plusUn() {
+      this.total++
+    }
+  },
 
-
-
-
-
-
+  components: {
+    CompteurClic,
+    // BonjourLoc,
+  },
+}
 
 </script>
 
 <template id="app">
+
   <header>
     <div>
       <!--      <FirstApp/>-->
       <!--    <part-two/>-->
-      <SayHello/>
-      <BonjourLoc number="10" ></BonjourLoc>
-      <BonjourLoc number="100" ></BonjourLoc>
-      <BonjourLoc number="1000" ></BonjourLoc>
+<!--      <SayHello ></SayHello>-->
+<!--      <BonjourLoc number="10" ></BonjourLoc>-->
+<!--      <BonjourLoc number="100" ></BonjourLoc>-->
+<!--      <BonjourLoc number="1000" ></BonjourLoc>-->
+   {{total}}
+      <br><br>
+      <CompteurClic @incremente="plusUn"></CompteurClic>
+      <CompteurClic @incremente="plusUn"></CompteurClic>
+      <CompteurClic @incremente="plusUn"></CompteurClic>
     </div>
 
   </header>
