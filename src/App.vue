@@ -3,8 +3,9 @@
 // import PartTwo from "./components/PartTwo.vue";
 // import SayHello from "./components/SayHello.vue";
 
-import CompteurClic from "./components/CompteurClic.vue";
+// import CompteurClic from "./components/CompteurClic.vue";
 // import BonjourLoc from "./components/BonjourLoc.vue";
+import UseAxios from "./components/UseAxios.vue";
 
 export default {
   name: 'App',
@@ -15,13 +16,14 @@ export default {
   },
 
   methods: {
-    plusUn() {
-      this.total++
-    }
+    // plusUn() {
+    //   this.total++
+    // }
   },
 
   components: {
-    CompteurClic,
+    // CompteurClic,
+    UseAxios,
     // BonjourLoc,
   },
 }
@@ -38,11 +40,12 @@ export default {
 <!--      <BonjourLoc number="10" ></BonjourLoc>-->
 <!--      <BonjourLoc number="100" ></BonjourLoc>-->
 <!--      <BonjourLoc number="1000" ></BonjourLoc>-->
-   {{total}}
-      <br><br>
-      <CompteurClic @incremente="plusUn"></CompteurClic>
-      <CompteurClic @incremente="plusUn"></CompteurClic>
-      <CompteurClic @incremente="plusUn"></CompteurClic>
+<!--   {{total}}-->
+<!--      <br><br>-->
+<!--      <CompteurClic @incremente="plusUn"></CompteurClic>-->
+<!--      <CompteurClic @incremente="plusUn"></CompteurClic>-->
+<!--      <CompteurClic @incremente="plusUn"></CompteurClic>-->
+      <UseAxios/>
     </div>
 
   </header>
