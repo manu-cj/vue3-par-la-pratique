@@ -5,7 +5,9 @@
 
 // import CompteurClic from "./components/CompteurClic.vue";
 // import BonjourLoc from "./components/BonjourLoc.vue";
-import UseAxios from "./components/UseAxios.vue";
+// import UseAxios from "./components/UseAxios.vue";
+// import TestSlots from "./components/TestSlots.vue";
+import ListeEmployer from "./components/ListeEmployer.vue";
 
 export default {
   name: 'App',
@@ -23,8 +25,10 @@ export default {
 
   components: {
     // CompteurClic,
-    UseAxios,
+    // UseAxios,
     // BonjourLoc,
+    // TestSlots,
+    ListeEmployer,
   },
 }
 
@@ -45,7 +49,20 @@ export default {
 <!--      <CompteurClic @incremente="plusUn"></CompteurClic>-->
 <!--      <CompteurClic @incremente="plusUn"></CompteurClic>-->
 <!--      <CompteurClic @incremente="plusUn"></CompteurClic>-->
-      <UseAxios/>
+<!--      <UseAxios/>-->
+
+<!--      <TestSlots titre="Titre de l'article o">-->
+<!--        <template v-slot:texte>-->
+<!--          <p>Texte de l'article</p>-->
+<!--        </template>-->
+<!--        <p>Ce texte est intégré dans le slot default</p>-->
+<!--      </TestSlots>-->
+      <ListeEmployer>
+        <template v-slot="slotProps">
+          <span><em>{{slotProps.personne.prenom}}</em></span>&nbsp;
+          <span><strong>{{slotProps.personne.nom.toUpperCase()}}</strong></span>
+        </template>
+      </ListeEmployer>
     </div>
 
   </header>
