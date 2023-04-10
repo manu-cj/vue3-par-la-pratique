@@ -14,7 +14,7 @@
   <br><br>
   <div id="projects">
     <div class="project" v-for="project in projects" :key="project"
-         style="width: 33%; height: 500px; background-size: cover"
+         style="width: 15%; height: 300px; background-size: cover"
 
     >
       <img :src="project.img" alt="" style="width: 100%; height: 100%">
@@ -57,6 +57,14 @@ export default {
           date : '12/21',
           img : 'src/assets/picture_project/appBudget.png',
         },
+        {
+          date : '12/21',
+          img : 'src/assets/picture_project/wos.png',
+        },
+        {
+          date : '12/21',
+          img : 'src/assets/picture_project/appBudget.png',
+        },
       ]
     }
   },
@@ -83,9 +91,13 @@ export default {
 </script>
 
 <style scoped>
+input[type=text] {
+  width: 200px;
+}
+
 #projects {
-  width: 100%;
-  height: 500px;
+  width: 90%;
+  height: 350px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -97,7 +109,7 @@ export default {
 }
 
 .project:hover {
-  border: #d55200 ridge 3px;
+  border: #d55200 double 3px;
   cursor: pointer;
 }
 
