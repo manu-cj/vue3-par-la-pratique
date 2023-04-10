@@ -7,7 +7,7 @@
 // import BonjourLoc from "./components/BonjourLoc.vue";
 // import UseAxios from "./components/UseAxios.vue";
 // import TestSlots from "./components/TestSlots.vue";
-import ListeEmployer from "./components/ListeEmployer.vue";
+// import ListeEmployer from "./components/ListeEmployer.vue";
 
 export default {
   name: 'App',
@@ -28,7 +28,7 @@ export default {
     // UseAxios,
     // BonjourLoc,
     // TestSlots,
-    ListeEmployer,
+    // ListeEmployer,
   },
 }
 
@@ -54,12 +54,13 @@ export default {
 <!--        </template>-->
 <!--        <p>Ce texte est intégré dans le slot default</p>-->
 <!--      </TestSlots>-->
-      <ListeEmployer>
-        <template v-slot="slotProps">
-          <span><em>{{slotProps.personne.prenom}}</em></span>&nbsp;
-          <span><strong>{{slotProps.personne.nom.toUpperCase()}}</strong></span>
-        </template>
-      </ListeEmployer>
+<!--      <ListeEmployer>-->
+<!--        <template v-slot="slotProps">-->
+<!--          <span><em>{{slotProps.personne.prenom}}</em></span>&nbsp;-->
+<!--          <span><strong>{{slotProps.personne.nom.toUpperCase()}}</strong></span>-->
+<!--        </template>-->
+<!--      </ListeEmployer>-->
+  <div></div>
 </template>
 
 <style>
