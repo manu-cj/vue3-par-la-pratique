@@ -35,9 +35,6 @@ export default {
 </script>
 
 <template id="app">
-
-  <header>
-    <div>
       <!--      <FirstApp/>-->
       <!--    <part-two/>-->
 <!--      <SayHello ></SayHello>-->
@@ -63,15 +60,11 @@ export default {
           <span><strong>{{slotProps.personne.nom.toUpperCase()}}</strong></span>
         </template>
       </ListeEmployer>
-    </div>
-
-  </header>
-
-  <main>
-
-  </main>
 </template>
 
-<style scoped>
-
+<style>
+#app {
+  width: 100%;
+  height: 100%;
+}
 </style>
